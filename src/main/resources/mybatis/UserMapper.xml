@@ -4,10 +4,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.springbootdemo.mapper.UserMapper">
     <!--getAll 查询所有数据-->
-<!--    <select id="getAll" resultType="com.example.springbootdemo.entity.User">-->
-<!--        select *-->
-<!--        from user-->
-<!--    </select>-->
+    <select id="getAllProductProgress" resultType="com.example.springbootdemo.entity.ProductProgress">
+        select *
+        from product_progress_log
+    </select>
     <!--getProductProgressByCustomerNO 根据CustomerNO查询数据-->
     <select id="getProductProgressBySaleOrder" resultType="com.example.springbootdemo.entity.ProductProgress">
         select *

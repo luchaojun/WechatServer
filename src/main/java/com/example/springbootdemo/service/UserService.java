@@ -19,12 +19,12 @@ public class UserService {
     UserMapper userMapper;
 
     // 查询数据库中所有信息
-//    public List<ProductProgress>  getAll(){
-//        return userMapper.getAll();
-//    }
+    public List<ProductProgress>  getAllProductProgress(){
+        return userMapper.getAllProductProgress();
+    }
 
     // 根据ID查询其中一条数据
-    public ProductProgress getProductProgressBySaleOrder(String saleOrder){
+    public List<ProductProgress> getProductProgressBySaleOrder(String saleOrder){
 
         return userMapper.getProductProgressBySaleOrder(saleOrder);
     }

@@ -16,10 +16,10 @@ import java.util.List;
 public interface UserMapper {
 
     // 查询数据库中所有信息
-//    List<ProductProgress> getAll();
+    List<ProductProgress> getAllProductProgress();
 
     // 根据ID查询其中一条数据
-    ProductProgress getProductProgressBySaleOrder(String saleOrder);
+    List<ProductProgress> getProductProgressBySaleOrder(String saleOrder);
 
 //    // 根据ID删除数据库中信息
 //    boolean deleteById(int id);

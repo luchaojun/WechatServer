@@ -18,17 +18,16 @@ public class UserController {
     @Autowired
     UserService userService;
     // 查询数据库中所有信息
-//    @GetMapping("/getAll")
-//    @ResponseBody
-//    public List<ProductProgress> getAll() {
-//        System.out.println("getAll return");
-//        return userService.getAll();
-//    }
+    @GetMapping("/getAllProductProgress")
+    @ResponseBody
+    public List<ProductProgress> getAllProductProgress() {
+        return userService.getAllProductProgress();
+    }
 
     //根据ID查询其中一条数据
     @GetMapping("/getProductProgressBySaleOrder")
     @ResponseBody
-    public ProductProgress getProductProgressBySaleOrder(String saleOrder) {
+    public List<ProductProgress> getProductProgressBySaleOrder(String saleOrder) {
         return userService.getProductProgressBySaleOrder(saleOrder);
     }
 
