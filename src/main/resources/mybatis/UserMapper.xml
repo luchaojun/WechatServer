@@ -4,30 +4,30 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.springbootdemo.mapper.UserMapper">
     <!--getAll 查询所有数据-->
-    <select id="getAll" resultType="com.example.springbootdemo.entity.User">
+<!--    <select id="getAll" resultType="com.example.springbootdemo.entity.User">-->
+<!--        select *-->
+<!--        from user-->
+<!--    </select>-->
+    <!--getProductProgressByCustomerNO 根据CustomerNO查询数据-->
+    <select id="getProductProgressBySaleOrder" resultType="com.example.springbootdemo.entity.ProductProgress">
         select *
-        from user
+        from product_progress_log
+        where sale_order=#{sale_order}
     </select>
-    <!--getUserById 根据ID查询数据-->
-    <select id="getUserById" resultType="com.example.springbootdemo.entity.User">
-        select *
-        from user
-        where id=#{id}
-    </select>
-    <!--deleteById 根据ID删除一条数据-->
-    <delete id="deleteById" parameterType="com.example.springbootdemo.entity.User">
-        delete from user
-        where id = #{id}
-    </delete>
-    <!--insert 增加一条数据-->
-    <insert id="insert" parameterType="com.example.springbootdemo.entity.User">
-        insert into user (id,username,password)
-        values(#{id},#{username},#{password})
-    </insert>
-    <!--update 根据ID改变一条数据-->
-    <update id="updateById" parameterType="com.example.springbootdemo.entity.User">
-        update user
-        set username=#{username},password=#{password}
-        where id = #{id}
-    </update>
+<!--    &lt;!&ndash;deleteById 根据ID删除一条数据&ndash;&gt;-->
+<!--    <delete id="deleteById" parameterType="com.example.springbootdemo.entity.User">-->
+<!--        delete from user-->
+<!--        where id = #{id}-->
+<!--    </delete>-->
+<!--    &lt;!&ndash;insert 增加一条数据&ndash;&gt;-->
+<!--    <insert id="insert" parameterType="com.example.springbootdemo.entity.User">-->
+<!--        insert into user (id,username,password)-->
+<!--        values(#{id},#{username},#{password})-->
+<!--    </insert>-->
+<!--    &lt;!&ndash;update 根据ID改变一条数据&ndash;&gt;-->
+<!--    <update id="updateById" parameterType="com.example.springbootdemo.entity.User">-->
+<!--        update user-->
+<!--        set username=#{username},password=#{password}-->
+<!--        where id = #{id}-->
+<!--    </update>-->
 </mapper>
